@@ -1,8 +1,8 @@
-$traceRouteResult = Test-NetConnection -TraceRoute 104.18.19.119
+$traceRouteResult = Test-NetConnection -TraceRoute 8.8.8.8
 $gateways = $traceRouteResult.TraceRoute
 
 # Display the gateways
-#$pingresult = Test-Connection 104.18.19.119
+#$pingresult = Test-Connection 8.8.8.8
 
 foreach ($gateway in $gateways) {
     $job = Start-Job -ScriptBlock {
